@@ -13,24 +13,38 @@
       max-width: 100%;
       height: auto;
       border-radius: 12px;
+      margin-bottom: 20px;
     }
     button {
       padding: 10px 20px;
       font-size: 16px;
-      margin: 20px 10px;
+      margin: 10px;
       cursor: pointer;
+    }
+    .response {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
     }
   </style>
 </head>
 <body>
 
   <h1>Bewerte dieses Bild</h1>
-  <img src="A_2D_anime-style_illustration_depicts_two_young_me.png" alt="Anime-Bild">
+  <img src="bild.png" alt="Anime-Bild">
 
-  <form action="bewerten.php" method="POST">
-    <button name="bewertung" value="like">👍 Gefällt mir</button>
-    <button name="bewertung" value="dislike">👎 Gefällt mir nicht</button>
-  </form>
+  <div>
+    <button onclick="bewerten('Gefällt mir')">👍 Gefällt mir</button>
+    <button onclick="bewerten('Gefällt mir nicht')">👎 Gefällt mir nicht</button>
+  </div>
+
+  <div class="response" id="antwort"></div>
+
+  <script>
+    function bewerten(antwort) {
+      document.getElementById("antwort").innerText = "Du hast ausgewählt: " + antwort;
+    }
+  </script>
 
 </body>
 </html>
