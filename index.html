@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime-Bild Bewertung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 20px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bewerte dieses Bild</h1>
+  <img src="A_2D_anime-style_illustration_depicts_two_young_me.png" alt="Anime-Bild">
+
+  <form action="bewerten.php" method="POST">
+    <button name="bewertung" value="like">👍 Gefällt mir</button>
+    <button name="bewertung" value="dislike">👎 Gefällt mir nicht</button>
+  </form>
+
+</body>
+</html>
